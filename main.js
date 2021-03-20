@@ -19,6 +19,13 @@ const material = {
       { title: "套票描述", hint: "請填寫套票描述" },
     ],
   },
+
+  filterArea: {
+    All: "全部地區",
+    TP: "台北",
+    TC: "台中",
+    KH: "高雄",
+  },
 };
 
 // === Function ===
@@ -50,7 +57,6 @@ function addTicketOptions() {
       `;
     });
 
-    // console.log(optList);
     return optList;
   }
 
@@ -72,6 +78,27 @@ function addTicketOptions() {
   dom.innerHTML += htmlMsg;
 }
 
+// === bottom part ===
+const filterNum = 6;
+function addFilter() {
+  const dom = document.querySelector(".area-filter-container");
+  // console.log(dom);
+  const { filterArea: areas } = material;
+  dom.innerHTML = `
+  <div class="filter-ctl-container">
+    <select class="area-selector">
+      ${Object.values(areas).map((areaName) => `<option>${areaName}</option>`)}
+    </select>
+    <span>本次搜尋共${filterNum}筆資料</span>
+  </div>
+  `;
+}
+
+// function addTripCard() {
+//   console.log("addTripCard");
+// }
+
 // === main ===
 addLogo();
 addTicketOptions();
+addFilter();
