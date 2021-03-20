@@ -1,0 +1,19 @@
+.pannel {
+  width: 768px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  
+
+  
+}
+
+.logo-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-pic{
+    width: 
+}

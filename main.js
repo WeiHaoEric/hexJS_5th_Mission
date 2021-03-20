@@ -5,15 +5,21 @@ const material = {
   },
 };
 
+
 function addLogo(dom) {
   const { pic, title } = material.logo;
 
   dom.innerHTML = `
-    <img src="${pic}">
-    <img src="${title}">
+    <div class="logo-container">
+        <img src="${pic}" class="logo-pic">
+        <img src="${title}" class="logo-title">
+    </div>
     `;
 }
 
 const domStart = document.querySelector(".dom-start");
+
+
+
 addLogo(domStart);
 console.log(domStart);
