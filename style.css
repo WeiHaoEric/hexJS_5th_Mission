@@ -1,15 +1,17 @@
 .pannel {
-  width: 768px;
+  
   height: 100%;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
 }
 
 /* === top/bottom paet */
 .top-part,
 .bottom-part {
-  width: 100%;
+  width: 768px;
   display: flex;
 }
 
@@ -77,8 +79,10 @@
 .ticket-input {
   font-family: "Noto Sans medium";
   font-size: 16px;
+
+  background-color: #fafafa;
   width: 70%;
   color: #818a91;
   border: 0px;
-  /* padding-top: 0.5rem; */
+  
 }
