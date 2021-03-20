@@ -3,17 +3,39 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  
-
-  
 }
 
 .logo-container {
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.logo-pic{
-    width: 
+.ticket-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ticket-header {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: solid 2px #00807e;
+}
+
+.ticket-btn-new {
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  font-size: large;
+  color: #00807e;
+
+  margin: 1rem 0.5rem;
+}
+.ticket-title {
+  /* background-color: bisque; */
+  width: 80%;
+  font-size: large;
+  font-family: "Noto Sans, Bold";
 }
