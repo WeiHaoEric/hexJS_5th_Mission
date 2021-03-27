@@ -199,22 +199,3 @@ addLogo();
 addTicketOptions();
 addFilter();
 addTripCardList();
-
-{
-  /* <div class="a-card">
-<div class="card-top">
-  <div class="card-area-name-block">
-    <div class="card-area-name">${area}</div>
-  </div>
-  <div class="card-trip-img">
-    <img src=${imgUrl} width="70%" height="70%">
-  </div>
-</div>
-<div class="card-bottom">
-  <div class="card-trip-name">
-    ${name}
-  </div>
-  <div class="card-trip-desc">${tripDesc}</div>
-</div>
-</div> */
-}
