@@ -28,6 +28,8 @@ const material = {
   },
 };
 
+let tripData = null;
+
 // === Function ===
 function addLogo() {
   const dom = document.querySelector(".logo-container");
@@ -96,7 +98,7 @@ function addFilter() {
   `;
 }
 
-function addTripCardList({ data: tripData }) {
+function addTripCardList() {
   const dom = document.querySelector(".card-container");
 
   // create Trip Card
@@ -156,14 +158,20 @@ function addTripCardList({ data: tripData }) {
   `;
 }
 
+function renderData() {
+  addLogo();
+  addTicketOptions();
+  addFilter();
+  addTripCardList();
+}
+
 // === main ===
 axios
   .get(
     "https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json"
   )
   .then(({ data }) => {
-    addLogo();
-    addTicketOptions();
-    addFilter();
-    addTripCardList(data);
+    console.log(data.data);
+    tripData = data.data;
+    renderData();
   });
