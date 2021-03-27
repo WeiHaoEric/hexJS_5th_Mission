@@ -117,7 +117,7 @@ function addTicketOptions() {
 }
 
 // === bottom part ===
-let filterNum = 6;
+let filterNum = "?";
 let filterTarget = "All";
 
 function addFilter() {
