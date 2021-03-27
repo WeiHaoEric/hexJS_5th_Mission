@@ -159,11 +159,22 @@ function addTripCardList() {
         <div class="row">
           <span class="card-rate">${8.6}</span>
           <h4 class="card-trip-name col-12">${name}</h4>
-          <div class="card-trip-desc col-12">${tripDesc}</div>
+          <p class="card-trip-desc col-12">${tripDesc}</p>
         </div>
       </div>
 
-  
+      <div class="card-bottom container">
+        <div class="row">
+            <div class="card-icon col-1">!</div>
+            <div class="card-remain col-5">剩下最後${group}組</div>
+            <div class="card-price-info col-5 ">
+              <div class="row">
+                <div class="card-dollar col-3">TWD</div>
+                <div class="card-price col-8">$${price}</div>
+              </div>
+            </div>  
+          </div>
+      </div>
       
     </div>
    `;
