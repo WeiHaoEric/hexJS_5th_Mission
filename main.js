@@ -163,8 +163,8 @@ function addTripCardList() {
         </div>
       </div>
 
-      <div class="card-bottom container">
-        <div class="row">
+      <div class="container">
+        <div class="row card-bottom">
             <div class="card-icon col-1">!</div>
             <div class="card-remain col-5">剩下最後${group}組</div>
             <div class="card-price-info col-5 ">

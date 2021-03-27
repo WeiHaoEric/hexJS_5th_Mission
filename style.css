@@ -126,6 +126,9 @@
 
 .a-card-container {
   position: relative;
+  background-color: white;
+  border: 6px solid #f7f7f7
+  ;
 }
 
 .card-area-name {
