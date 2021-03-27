@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-/* === top/bottom paet */
+/* === top/middle/bottom paet */
 .top-part {
   width: 868px;
   display: flex;
@@ -86,6 +86,7 @@
 /* === bottom part === */
 
 .bottom-part {
+  background-color: #F7F7F7;
   width: 1200px;
   display: flex;
   flex-direction: column;
@@ -102,6 +103,7 @@
 .filter-ctl-container {
   width: 80%;
   color: #818a91;
+  margin-top: 2rem;
 }
 
 .area-selector {
@@ -139,6 +141,28 @@
   height: 40px;
 }
 
-.card-trip-img {
+.card-rate {
+  position: absolute; 
+  z-index: 1;
+  background-color: #64c3bf;
+  width: 10%;
+  height: 10%;
+  bottom: 40%;
+  left: 12.5%;
   
 }
+
+.card-trip-name{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-bottom:#64c3bf ;
+  color: #64c3bf;
+
+}
+
+.card-trip-desc{
+  padding-left: 2rem;
+  color: #818A91; 
+
+}
+

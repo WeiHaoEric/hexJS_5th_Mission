@@ -154,9 +154,17 @@ function addTripCardList() {
         <span class="card-area-name col-3">${area}</span>
         <img class="card-trip-img col-12" src=${imgUrl} >
       </div>
-      <div class="card-bottom container">
-       bottom
+      
+      <div class="card-middle container">
+        <div class="row">
+          <span class="card-rate">${8.6}</span>
+          <h4 class="card-trip-name col-12">${name}</h4>
+          <div class="card-trip-desc col-12">${tripDesc}</div>
+        </div>
       </div>
+
+  
+      
     </div>
    `;
   }
