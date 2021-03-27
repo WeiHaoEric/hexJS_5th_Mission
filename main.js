@@ -149,29 +149,28 @@ function addTripCardList() {
     rate,
   }) {
     return `
-    <div class="a-card">
-      <div class="card-top">
-        <div class="card-area-name-block">
-          <div class="card-area-name">${area}</div>
-        </div>
-        <div class="card-trip-img">
-          <img src=${imgUrl} width="70%" height="70%">
-        </div>
+    <div class="a-card-container col-4">
+      <div class="card-top container">
+        <span class="card-area-name col-3">${area}</span>
+        <img class="card-trip-img col-12" src=${imgUrl} >
       </div>
-      <div class="card-bottom">
-        <div class="card-trip-name">
-          ${name}
-        </div>
-        <div class="card-trip-desc">${tripDesc}</div>
+      <div class="card-bottom container">
+       bottom
       </div>
     </div>
    `;
   }
 
   // card list
+  let cardList = "";
+  tripData.forEach((trip) => {
+    console.log(TripCard(trip));
+    cardList += TripCard(trip);
+  });
+  console.log(cardList);
   dom.innerHTML = `
-  <div class="card-list-container">
-    ${tripData.map(trip=>TripCard(trip))}
+  <div class="card-list-container row">
+    ${cardList}
   </div>
   `;
 }
@@ -181,3 +180,22 @@ addLogo();
 addTicketOptions();
 addFilter();
 addTripCardList();
+
+{
+  /* <div class="a-card">
+<div class="card-top">
+  <div class="card-area-name-block">
+    <div class="card-area-name">${area}</div>
+  </div>
+  <div class="card-trip-img">
+    <img src=${imgUrl} width="70%" height="70%">
+  </div>
+</div>
+<div class="card-bottom">
+  <div class="card-trip-name">
+    ${name}
+  </div>
+  <div class="card-trip-desc">${tripDesc}</div>
+</div>
+</div> */
+}
