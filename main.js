@@ -90,10 +90,16 @@ function addFilter() {
   const { filterArea: areas } = material;
   dom.innerHTML = `
   <div class="filter-ctl-container">
-    <select class="area-selector">
-      ${Object.values(areas).map((areaName) => `<option>${areaName}</option>`)}
-    </select>
-    <span>本次搜尋共${filterNum}筆資料</span>
+    <div class = "filter-area">
+      <select class="area-selector">
+        ${Object.values(areas).map(
+          (areaName) => `<option>${areaName}</option>`
+        )}
+      </select>
+      <span>本次搜尋共${filterNum}筆資料</span>
+    </div>
+
+    <div class="donut-chart"></div>
   </div>
   `;
 }
@@ -158,20 +164,44 @@ function addTripCardList() {
   `;
 }
 
+function insertChart(){
+  var chart = c3.generate({
+    bindto: ".donut-chart",
+    data: {
+        columns: [
+            ['鬼屋', 10],
+            ['女僕咖啡廳', 20],
+            ['童話世界', 5],
+        ],
+        type : 'donut',
+          colors:{
+          '鬼屋': "#F280CA",
+          "女僕咖啡屋":"#F280CA" , 
+          "童話世界":"#26BFC7" ,
+          }
+    },
+
+    donut: {
+        title: "園遊會主題票選"
+    }
+});
+}
+
 function renderData() {
   addLogo();
   addTicketOptions();
   addFilter();
+  insertChart();
   addTripCardList();
 }
 
 // === main ===
 axios
   .get(
-    "https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json"
+    // "https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json" // 第六週 API
+    "https://raw.githubusercontent.com/hexschool/js-training/main/travelAPI-lv1.json" // 第七週 API
   )
   .then(({ data }) => {
-    console.log(data.data);
-    tripData = data.data;
+    tripData = data;
     renderData();
   });
