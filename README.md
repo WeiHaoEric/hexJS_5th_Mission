@@ -14,3 +14,9 @@
 - use axios send the [link1](https://raw.githubusercontent.com/hexschool/js-training/main/travelAPI-lv1.json) or [link2](https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json) 
   to request the data.
 - integrated week5 code with received data by axios.
+
+
+### Week7
+- edited: 2021.04.06
+- LV2：依照此 [XD 設計稿](https://xd.adobe.com/view/3b957757-f50b-4a73-be01-16393e53f49b-6ec6/specs/)，用 axios 介接資料，並顯示 C3 圖表 (<-- 我做的部分>)
+- LV3：做 LV2，並加上上方套票新增時，下方 C3 與套票列表也會即時更新
