@@ -104,6 +104,23 @@
   width: 80%;
   color: #818a91;
   margin-top: 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter-area{
+  width: 70%;
+  height: 10%;
+}
+
+.chart-container{
+  width: 30%;
+}
+
+.donut-chart {
+  width: 320px; 
+  height: 240px;
 }
 
 .area-selector {
@@ -127,8 +144,7 @@
 .a-card-container {
   position: relative;
   background-color: white;
-  border: 6px solid #f7f7f7
-  ;
+  border: 6px solid #f7f7f7;
 }
 
 .card-area-name {
@@ -148,13 +164,13 @@
 .card-rate {
   position: absolute;
   z-index: 1;
-  background-color: #00807E;
+  background-color: #00807e;
   width: 40px;
   height: 30px;
   bottom: 53%;
   left: 11.5%;
   border-radius: 5%;
- 
+
   font-size: 16px;
   color: white;
   text-align: center;
@@ -176,9 +192,8 @@
 }
 
 /* card-bottom */
-.card-bottom{
+.card-bottom {
   padding-left: 2rem;
-
 }
 
 .card-icon {
@@ -186,9 +201,8 @@
   background-color: #00807e;
   color: white;
   border-radius: 100%;
-  height: 25px; 
+  height: 25px;
   width: 25px;
-
 }
 
 .card-remain {

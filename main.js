@@ -99,7 +99,9 @@ function addFilter() {
       <span>本次搜尋共${filterNum}筆資料</span>
     </div>
 
-    <div class="donut-chart"></div>
+    <div class = "chart-container">
+      <div class="donut-chart"></div>
+    </div>
   </div>
   `;
 }
@@ -164,27 +166,38 @@ function addTripCardList() {
   `;
 }
 
-function insertChart(){
+function insertChart() {
+  const parseArea = () => {
+    const tmp = {};
+    tripData.forEach(({ area }) => {
+      if (tmp[area] === undefined) tmp[area] = 1;
+      else tmp[area] += 1;
+    });
+
+    const result = Object.keys(tmp).map((area) => [area, tmp[area]]);
+
+    return result;
+  };
+
+  const colResult = parseArea();
+  console.log(colResult);
+
   var chart = c3.generate({
     bindto: ".donut-chart",
     data: {
-        columns: [
-            ['鬼屋', 10],
-            ['女僕咖啡廳', 20],
-            ['童話世界', 5],
-        ],
-        type : 'donut',
-          colors:{
-          '鬼屋': "#F280CA",
-          "女僕咖啡屋":"#F280CA" , 
-          "童話世界":"#26BFC7" ,
-          }
+      columns: colResult,
+      type: "donut",
+      colors: {
+        "台北": "#26C0C7",
+        "台中": "#5151D3",
+        "高雄": "#E68618",
+      },
     },
 
     donut: {
-        title: "園遊會主題票選"
-    }
-});
+      title: "套票地區比重",
+    },
+  });
 }
 
 function renderData() {
